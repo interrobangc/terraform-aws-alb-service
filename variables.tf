@@ -56,3 +56,8 @@ variable "max_size" {
   description = "Max Number of instances"
   default     = 2
 }
+
+variable "associate_public_ip_address" {
+  description = "Associate a public ip address with each instance"
+  default     = false
+}

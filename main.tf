@@ -49,6 +49,8 @@ module "asg" {
   max_size      = "${var.max_size}"
   subnets       = ["${var.service_subnets}"]
 
+  associate_public_ip_address = "${var.associate_public_ip_address}"
+
   security_groups = [
     "${module.alb.destination_security_group_ids}",
     "${var.instance_security_groups}",
