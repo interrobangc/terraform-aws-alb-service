@@ -3,7 +3,7 @@ locals {
 }
 
 module "alb" {
-  source = "github.com/interrobangc/terraform-aws-alb"
+  source = "github.com/interrobangc/terraform-aws-alb?ref=v0.1"
 
   env  = "${var.env}"
   name = "${var.env}-${var.name}"
@@ -35,7 +35,7 @@ module "alb" {
 }
 
 module "asg" {
-  source = "github.com/interrobangc/terraform-aws-asg"
+  source = "github.com/interrobangc/terraform-aws-asg?ref=v0.1.1"
 
   env = "${var.env}"
 
